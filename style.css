@@ -1,26 +1,90 @@
 body {
-  font-family: Arial;
-  background: #111;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Main container */
 .container {
-  margin-top: 100px;
+  width: 420px;
+  height: 600px;
+  background: #0b1220;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
-textarea {
-  width: 300px;
-  height: 100px;
+/* Header */
+h1 {
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* Chat area */
+#responseBox {
+  flex: 1;
   padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input area */
+textarea {
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #111827;
+  color: white;
+  resize: none;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px 20px;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
 }
 
-#responseBox {
-  margin-top: 20px;
-  font-size: 18px;
+button:hover {
+  background: #2563eb;
+}
+
+/* Chat bubbles */
+.message {
+  padding: 10px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+/* user bubble */
+.user {
+  align-self: flex-end;
+  background: #3b82f6;
+}
+
+/* bot bubble */
+.bot {
+  align-self: flex-start;
+  background: #1f2937;
+  border: 1px solid #374151;
 }
